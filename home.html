@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nishkaam Period Tracker</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="images/Favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <link rel="stylesheet" href="opensite/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="opensite/css/style.css" />
+    <link rel="stylesheet" href="opensite/css/responsive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="zoom/xzoom.css" rel="stylesheet" />
+
+    <link href="Styles/AutoComplete.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="Styles/Validations.css" rel="stylesheet" />
+    <link href="Styles/alertify.bootstrap.css" rel="stylesheet" />
+    <link href="Styles/alertify.core.css" rel="stylesheet" />
+    <link href="Styles/alertify.default.css" rel="stylesheet" />
+    <script src="AlertMsg/alertify.js"></script>
+    <script src="AlertMsg/alertify.min.js"></script>
+
+    <style></style>
+  </head>
+
+  <body style="background-color: rgb(186, 165, 165); padding: 2rem">
+    <div>
+      <div ng-view="" id="dataview" class="ng-scope">
+        <section class="breadcrumbs ng-scope"></section>
+
+        <section
+          class="trackingperiod ng-scope"
+          ng-controller="PeriodCalculatorCtrl"
+        >
+          <div class="container trackerbox">
+            <!--============================================================================================================ -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="period-calculator-contents">
+                  <h2 class="webtracker">Period Tracker</h2>
+                  <p class="trackingp">
+                    Track your period with our free service .
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                    <div class="period-calculatordata">
+                      <h3>(1)</h3>
+                      <h4>When did your last Period Start?</h4>
+
+                      <div class="perioddates">
+                        <div class="row pdates">
+                          <div class="col-lg-3 col-4">
+                            <!-- Modified input field to capture selected date -->
+                            <input
+                              style="cursor: pointer"
+                              type="date"
+                              id="selectedDate"
+                              class="form-control calendarimgs"
+                              placeholder="Select date"
+                            />
+                          </div>
+
+                          <div class="col-lg-2 col-3">
+                            <!-- Display selected day -->
+                            <h4
+                              class="perioddate ng-binding"
+                              id="selectedDay"
+                            ></h4>
+                          </div>
+                          <div class="col-lg-7 col-5">
+                            <!-- Display selected month -->
+                            <h4
+                              class="periodday ng-binding"
+                              id="selectedMonth"
+                            ></h4>
+                            <h5
+                              class="periodmaonth ng-binding"
+                              id="selectedYear"
+                            ></h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                    <div class="period-calculatordata">
+                      <h3>( 2 )</h3>
+                      <h4>How many days did your last Period Last ?</h4>
+                      <div class="perioddates">
+                        <div class="row pdates">
+                          <div class="qty">
+                            <input
+                              type="button"
+                              value="-"
+                              class="minus bg-dark decrease"
+                              name="decrease2"
+                              namfdprocessedid="3p9whs"
+                            />
+
+                            <input
+                              style="border: none"
+                              type="text"
+                              class="count ng-pristine ng-untouched ng-valid"
+                              name="qty"
+                              step="1"
+                              value="1"
+                              ng-model="PeriodDays"
+                              id="PeriodDays"
+                              fdprocessedid="9irtru"
+                            />
+                            <input
+                              type="button"
+                              value="+"
+                              class="plus bg-dark increase"
+                              name="increase2"
+                              fdprocessedid="x60chi"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-md-12 col-lg-4 mb-4">
+                    <div class="period-calculatordata">
+                      <h3>( 3 )</h3>
+                      <h4>How long is your Cycle ?</h4>
+                      <div class="perioddates">
+                        <div class="row pdates">
+                          <div class="qty">
+                            <input
+                              type="button"
+                              value="-"
+                              class="minus bg-dark decrease"
+                              name="decrease3"
+                              fdprocessedid="456h9m"
+                            />
+
+                            <input
+                              style="border: none"
+                              type="text"
+                              class="count ng-pristine ng-untouched ng-valid"
+                              name="qty2"
+                              step="1"
+                              value="25"
+                              ng-model="PeriodCycle"
+                              id="PeriodCycle"
+                              fdprocessedid="ijvvn"
+                            />
+                            <input
+                              type="button"
+                              value="+"
+                              class="plus bg-dark increase"
+                              name="increase3"
+                              fdprocessedid="bamgbq"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ======================================================================================================= -->
+            <div clas="row">
+              <div class="col-md-12 text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  ng-click="calculateMenstrualCycle()"
+                  fdprocessedid="l2two"
+                  style="
+                    border-radius: 60px;
+                    background-color: #b18181;
+                    cursor: pointer;
+                  "
+                  onmouseover="this.style.backgroundColor =' #e1a0a0'"
+                  onmouseout="this.style.backgroundColor='#b18181'"
+                >
+                  See results
+                </button>
+              </div>
+            </div>
+            <br /><br />
+            <main  id="all-cards">
+            <!--=============================================================================================== -->
+            
+        </main>
+            <!-- ============================================================================================ -->
+            <div class="row">
+              <div class="col-lg-6 mx-auto">
+                <div class="row text-center">
+                  <div class="col-lg-6">
+                    <p class="pinkcolor">
+                      <i class="las la-circle"></i> Menstruation Period
+                    </p>
+                  </div>
+                  <div class="col-lg-6">
+                    <p class="green">
+                      <i class="las la-circle"></i> Ovulation Period
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="notes">
+                  <p>
+                    Please note that this is only an estimation of your
+                    menstrual cycle
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--======================================================================================================= -->
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <!-- ================================================================================================== -->
+  </body>
+</html>

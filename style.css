@@ -1,0 +1,76 @@
+
+.form-floating>.bi-calendar-date+.datepicker_input+label {
+    padding-left: 3.5rem;
+    z-index: 3;
+}
+
+#datepicker {
+    display: none;
+}
+
+.calendar {
+    margin-top: 20px;
+}
+
+.calendar-month {
+    margin-bottom: 10px;
+}
+
+.calendar-month h3 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 14.28%;
+    padding: 5px;
+    text-align: center;
+}
+
+.pink {
+    background-color: #fd8080;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin: 5px 3px;
+}
+
+.calendar-month {
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+    background: #fff;
+    margin: 0 15px;
+    margin-bottom: 26px;
+    box-shadow: 0 0 11px #3b3939;
+    border-radius: 10px;
+    height: 290px;
+}
+
+.qty .minus,
+.qty .plus {
+    line-height: 0;
+    font-size: 33px;
+    padding: 0;
+}
+
+.qty .count {
+    width: 80px
+}
+
+.fertile {
+    background-color: #48e139;
+    color: #fff;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin: 5px 3px;
+}

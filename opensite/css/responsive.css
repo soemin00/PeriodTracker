@@ -1,0 +1,746 @@
+/* Mobile Responsive Css Code */
+@media screen and (min-device-width: 221px) and (max-device-width: 767px) {
+    /* STYLES HERE */
+    .main-menu {
+        display: none;
+    }
+
+    h5.welcome {
+        display: none;
+    }
+
+    .menu-icon {
+        text-align: end !important;
+        font-size: 40px;
+    }
+
+    a.nav-link {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .contact-us-card-align {
+        margin-bottom: 40px;
+    }
+
+    button.navbar-toggler.toogle-class {
+        font-size: 40px;
+        outline: none;
+    }
+
+    .main-menu {
+        height: 100% !important;
+        display: block !important;
+        width: 300px !important;
+        bottom: 0;
+        padding: 20px !important;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        position: fixed;
+        transition-duration: 0.5s;
+        z-index: 9;
+    }
+
+    .left-0 {
+        left: 0px !important;
+    }
+
+    .mbl-overlay {
+        background: #0000008a;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    ul.main-menu li {
+        display: block;
+        /* padding: 5px 14px; */
+        text-align: left;
+        color: #fff;
+    }
+
+        ul.main-menu li a {
+            color: #000;
+            font-size: 20px;
+        }
+
+    .text-font {
+        font-size: 20px;
+    }
+
+    .explore-section {
+        padding: 20px 0 20px 0;
+    }
+
+    .Explore-align {
+        padding: 10px 0 0 10px;
+    }
+
+    .w-100.menu-icon {
+        display: flex;
+        justify-content: right;
+    }
+
+    .productinfo {
+        position: relative;
+        top: 0;
+    }
+
+    .calltoaction h3 {
+        font-size: 22px;
+        text-align: center;
+        color: #3e1727;
+        padding-top: 30px;
+        line-height: 35px;
+    }
+
+    h2.Periodh2 {
+        font-size: 20px;
+        color: #4e007c;
+    }
+    .welcome-text {
+        font-size: 20px;
+    }
+
+    p.Periodp {
+        font-size: 20px;
+    }
+
+    .products {
+        background: #e9e9e9;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .topfooter h5 {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    ul.social-links li {
+        display: inline-flex;
+        font-size: 26px;
+    }
+
+    .medialinksmb {
+        position: absolute;
+        bottom: 0;
+        background: #c89234;
+        width: 301px;
+        margin-left: -20px !important;
+    }
+
+    ul.main-menu li {
+        border-bottom: 1px #c8923442 solid;
+    }
+
+    .slidervideo {
+        width: 100%;
+        height: 127px;
+    }
+
+    p.topprdul::after {
+        content: '';
+        position: absolute;
+        border: 1px #dec18c solid;
+        top: 70px;
+        width: 150px;
+        left: 85px;
+    }
+
+    .mainslider {
+        margin-top: 0px;
+    }
+
+    .main_header {
+        background: #fff6e0;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    .thebestof {
+        margin-top: 15px;
+        position: relative;
+        left: 0;
+        margin-bottom: 30px;
+        border-radius: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .nature {
+        height: 100%;
+    }
+
+    .productdata {
+        margin-bottom: 20px;
+    }
+
+    .productdata_2 {
+        margin-bottom: 20px;
+    }
+
+    .Science {
+        padding-top: 0px;
+    }
+
+        .Science h2 {
+            font-size: 30px;
+            padding-bottom: 5px;
+        }
+
+    .learnbtn {
+        margin-bottom: 20px;
+    }
+
+    .Flexiplus::after {
+        right: 0;
+    }
+
+    .Plus::before {
+        left: -85px;
+        bottom: 400px;
+    }
+
+    ul.main-menu li {
+        border-right: 0px #c38820 solid;
+    }
+
+    ul.iconsimg {
+        list-style: none;
+        display: block;
+        padding-left: 0;
+    }
+
+    .pagbhar_Attractive {
+        left: 0;
+        bottom: 0px;
+        position: relative;
+    }
+
+    img.logo {
+        width: 125px;
+        padding: 10px 5px;
+    }
+
+    .user-icon {
+        font-size: 40px;
+    }
+
+    .shopping-cart-style {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    .shopping-cart-count {
+        top: 12px;
+        right: 17px;
+    }
+
+    .user-icon-align {
+        display: flex;
+        align-items: center;
+        justify-content: right !important;
+    }
+
+    p.p_content {
+        font-size: 16px;
+    }
+
+    h2.p {
+        font-size: 25px;
+        color: #52801a;
+    }
+
+    ul.iconsimg li {
+        font-size: 16px;
+        margin: 10px 0;
+        width: 50%;
+        float: left;
+    }
+
+    .textleft {
+        text-align: left !important;
+    }
+
+    h4.Hygiene {
+        font-size: 16px;
+    }
+
+    h2.h {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+
+    p.H_content {
+        font-size: 15px;
+    }
+
+    h2.A {
+        font-size: 30px;
+    position: absolute;
+    top: calc(100% - 245px);
+    left: calc(100% - 158px);
+    }
+
+    p.pAttractive_content {
+        font-size: 16px;
+        line-height: 35px;
+        margin-top: 5px;
+    }
+
+    .testimonialdata {
+        margin-top: 25px;
+    }
+
+    h2.testimonial {
+        font-size: 30px;
+    }
+
+    .Priority_content {
+        padding-top: 25px;
+    }
+
+    .pagbhar_content {
+        padding-top: 0;
+    }
+
+    .goodVibes {
+        padding: 10px 0px;
+    }
+
+    img.pagbharicons {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    h2.G {
+        font-size: 35px;
+    }
+
+    .period-content {
+        padding-top: 10px;
+    }
+
+    h2.whenismy {
+        font-size: 25px;
+    }
+
+    p.aboutus {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    h2.webtracker {
+        font-size: 25px;
+    }
+
+    p.trackingp {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .period-calculatordata h4 {
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .dnone {
+        display: none;
+    }
+
+    .signup-font {
+        font-size: 25px;
+    }
+
+    .sub-content {
+        top: 150px;
+        left: 10px;
+    }
+
+        .sub-content h2 {
+            font-size: 20px;
+        }
+        /*.about-head {
+    margin-top: 101px;
+}*/
+        .sub-content p {
+            margin-top: 40px;
+        }
+
+    .login-page-bg {
+        background-image: url(/opensite/images/logo-in-bg.png);
+        margin-top: 0 !important;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        background-position: inherit;
+        background-size: contain;
+    }
+
+    .account {
+        padding-left: 41px !important;
+    }
+
+    .looking {
+        font-weight: bold;
+        padding-left: 20px !important;
+    }
+
+        .looking a {
+            animation: blink 1s linear infinite;
+            color: #E91E63;
+            font-weight: bold;
+        }
+
+    .pagbhar_Attractive {
+        width: 100%;
+    }
+    .vibesgood {
+    padding: 0px 30px;
+}
+
+    img.iconimg {
+        width: 50px;
+        padding-right: 5px;
+        padding-left: 5px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+        .input-align {
+            /*margin-left: 15px !important;*/
+            text-align: left;
+            border: 1px solid #ddd !important;
+            box-shadow: none !important;
+        }
+    
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: .5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .newsignup {
+        background-image: url(/opensite/images/sign-up-bg.jpg);
+        margin-top: 0 !important;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        background-position: initial;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .calendar-month {
+        width: 100% !important;
+        display: inline-block;
+        padding: 20px;
+        background: #fff;
+        margin: 10px 0 !important;
+        margin-bottom: 26px;
+        box-shadow: 0 0 11px #3b3939;
+        border-radius: 10px;
+    }
+
+    .product-bg,
+    .product-bg-flexi, .product-bg-plus {
+        height: 300px;
+        width: 100%;
+        border-radius: 180px 50px 180px 0;
+        /* position: absolute; */
+        background: #f9b7c5;
+        z-index: -1;
+    }
+
+    .product-bg-flexi {
+        background: #797cc2;
+    }
+
+    .product-bg-plus {
+        background: #269e95;
+    }
+
+    ul.breadcrumb li {
+        font-size: 13px;
+    }
+
+    .goodVibes {
+        background-attachment: local;
+    }
+}
+
+    @media screen and (min-device-width: 768px) and (max-device-width: 992px) {
+        .input-align {
+            text-align: left;
+            border: 1px solid #ddd !important;
+            box-shadow: none !important;
+        }
+        .w-100.menu-icon {
+            display: flex;
+            justify-content: right;
+        }
+
+        .user-icon {
+            font-size: 40px;
+        }
+
+        .menu-icon {
+            text-align: end !important;
+            font-size: 40px;
+        }
+
+        a.nav-link {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact-us-card-align {
+            margin-bottom: 40px;
+        }
+
+        button.navbar-toggler.toogle-class {
+            font-size: 40px;
+            outline: none;
+        }
+
+        .main-menu {
+            height: 100% !important;
+            display: block !important;
+            width: 300px !important;
+            bottom: 0;
+            padding: 20px !important;
+            top: 0;
+            left: -100%;
+            background: #fff;
+            position: fixed;
+            transition-duration: 0.5s;
+            z-index: 9;
+        }
+
+        .left-0 {
+            left: 0px !important;
+        }
+
+        .mbl-overlay {
+            background: #0000008a;
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        ul.main-menu li {
+            display: block;
+            /* padding: 5px 14px; */
+            text-align: left;
+            color: #fff;
+        }
+
+            ul.main-menu li a {
+                color: #000;
+                font-size: 20px;
+            }
+
+        .text-font {
+            font-size: 20px;
+        }
+
+        .shopping-cart-count {
+            top: 12px;
+    right: 0px;
+        }
+
+        ul.main-menu li {
+            border-right: none;
+        }
+
+        ul.iconsimg li {
+            padding-right: 25px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        ul.iconsimg {
+            padding-left: 0;
+        }
+
+        .goodVibes {
+            background-attachment: local;
+        }
+        img.pagbharicons {
+             width: 100% !important;
+         }
+        .pagbhar_Attractive {
+        top: 10%;
+        }
+        h4.Hygiene {
+        font-size: 22px;
+        }
+        p.H_content {
+        font-size: 19px;
+        }
+        p.p_content {
+        font-size: 19px;
+        }
+        .Priority_content {
+        padding-top: 100px;
+        }
+         
+         img.iconimg {
+        width: 50px;
+        padding-right: 5px;
+        padding-left: 5px;
+        display: block;
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+         .calendar-month {
+    width: 45% !important;
+}
+         i.las.la-shopping-cart.shopping-cart-style {
+    margin-left: 10px;
+}
+         p.pAttractive_content {
+    font-size: 17px;
+    line-height: 28px;
+}
+    }
+@media screen and (min-device-width: 993px) and (max-device-width: 1080px) {
+    .w-100.menu-icon {
+            display: flex;
+            justify-content: right;
+        }
+
+        .user-icon {
+            font-size: 40px;
+        }
+
+        .menu-icon {
+            text-align: end !important;
+            font-size: 40px;
+        }
+
+        a.nav-link {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact-us-card-align {
+            margin-bottom: 40px;
+        }
+
+        button.navbar-toggler.toogle-class {
+            font-size: 40px;
+            outline: none;
+        }
+
+        .main-menu {
+            height: 100% !important;
+            display: block !important;
+            width: 300px !important;
+            bottom: 0;
+            padding: 20px !important;
+            top: 0;
+            left: -100%;
+            background: #fff;
+            position: fixed;
+            transition-duration: 0.5s;
+            z-index: 9;
+        }
+
+        .left-0 {
+            left: 0px !important;
+        }
+
+        .mbl-overlay {
+            background: #0000008a;
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        ul.main-menu li {
+            display: block;
+            /* padding: 5px 14px; */
+            text-align: left;
+            color: #fff;
+        }
+
+            ul.main-menu li a {
+                color: #000;
+                font-size: 20px;
+            }
+
+        .text-font {
+            font-size: 20px;
+        }
+
+        .shopping-cart-count {
+            top: 12px;
+            right: 12px;
+        }
+
+        ul.main-menu li {
+            border-right: none;
+        }
+
+        ul.iconsimg li {
+            padding-right: 25px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        ul.iconsimg {
+            padding-left: 0;
+        }
+
+        .goodVibes {
+            background-attachment: local;
+        }
+        img.pagbharicons {
+             width: 100% !important;
+         }
+        .pagbhar_Attractive {
+        top: 10%;
+        }
+        h4.Hygiene {
+        font-size: 22px;
+        }
+        p.H_content {
+        font-size: 19px;
+        }
+        p.p_content {
+        font-size: 19px;
+        }
+        .Priority_content {
+        padding-top: 100px;
+        }
+         
+         img.iconimg {
+        width: 50px;
+        padding-right: 5px;
+        padding-left: 5px;
+        display: block;
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+         .calendar-month {
+    width: 50%;
+        }
+         i.las.la-shopping-cart.shopping-cart-style {
+            margin-left: 20px;
+            }
+}

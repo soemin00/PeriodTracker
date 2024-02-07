@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Period Tracker</title>
+    <meta charset="utf-8">
+    <link rel='shortcut icon' href="images/Favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="opensite/css/bootstrap.min.css">
+    <link rel="stylesheet" href="opensite/css/style.css">
+    <link rel="stylesheet" href="opensite/css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="zoom/xzoom.css" rel="stylesheet" />
+
+
+    <link href="Styles/AutoComplete.css" rel="stylesheet" />
+    <link href="css/Validations.css" rel="stylesheet" />
+    <link href="Styles/alertify.bootstrap.css" rel="stylesheet" />
+    <link href="Styles/alertify.core.css" rel="stylesheet" />
+    <link href="Styles/alertify.default.css" rel="stylesheet" />
+    <script src="AlertMsg/alertify.js"></script>
+    <script src="AlertMsg/alertify.min.js"></script>
+</head>
+
+<body ng-app="OpenApp" class="ng-scope">
+
+    </div>
+
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    </header>
+
+
+    <div ng-view="" id="dataview" class="ng-scope">
+        <section class="breadcrumbs ng-scope">
+
+        </section>
+
+
+        <section class="trackingperiod ng-scope" ng-controller="PeriodCalculatorCtrl">
+            <div class="container trackerbox">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="period-calculator-contents">
+                            <h2 class="webtracker">Web Period Tracker</h2>
+                            <p class="trackingp">Tracking your period is easier than ever.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                                <div class="period-calculatordata">
+                                    <h3>( 1 )</h3>
+                                    <h4> When did your last Period Start ?</h4>
+
+                                    <div class="perioddates">
+                                        <div class="row pdates">
+                                            <div class="col-lg-3 col-4">
+                                                <input type="text"
+                                                    class="form-control calendarimgs ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date hasDatepicker"
+                                                    id="datepicker" uib-datepicker-popup="MM/dd/yyyy"                                      ng-model="txtOndate" ng-change="Assignfrommaxdate()"><img
+                                                    class="ui-datepicker-trigger" src="opensite/images/calendar.png"
+                                                    alt="Select date" title="Select date">
+                                            </div>
+
+                                            <div class="col-lg-2 col-3">
+                                                <h4 class="perioddate ng-binding">{today'sdate }</h4>
+                                            </div>
+                                            <div class="col-lg-7 col-5">
+                                                <h4 class="periodday ng-binding">{today's day}</h4>
+                                                <h5 class="periodmaonth ng-binding">{today's month}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4  col-md-6 col-lg-4  mb-4">
+                                <div class="period-calculatordata">
+                                    <h3>( 2 )</h3>
+                                    <h4>How many days did you last Period Last ?</h4>
+                                    <div class="perioddates">
+                                        <div class="row pdates">
+                                            <div class="qty">
+                                                <input type="button" value="-" class="minus bg-dark decrease"
+                                                    fdprocessedid="3p9whs">
+                                                <input type="text" class="count ng-pristine ng-untouched ng-valid"
+                                                    name="qty" step="1" value="1" ng-model="PeriodDays" id="PeriodDays"
+                                                    fdprocessedid="9irtru">
+                                                <input type="button" value="+" class="plus bg-dark increase"
+                                                    fdprocessedid="x60chi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4  col-md-12 col-lg-4  mb-4">
+                                <div class="period-calculatordata">
+                                    <h3>( 3 )</h3>
+                                    <h4>How long is your Cycle ?</h4>
+                                    <div class="perioddates">
+                                        <div class="row pdates">
+                                            <div class="qty">
+                                                <input type="button" value="-" class="minus bg-dark decrease"
+                                                    fdprocessedid="456h9m">
+                                                <input type="text" class="count ng-pristine ng-untouched ng-valid"
+                                                    name="qty2" step="1" value="25" ng-model="PeriodCycle"
+                                                    id="PeriodCycle" fdprocessedid="ijvvn">
+                                                <input type="button" value="+" class="plus bg-dark increase"
+                                                    fdprocessedid="bamgbq">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-primary" ng-click="PeriodCalculator()"
+                            fdprocessedid="l2two">Period Calculator</button>
+                    </div>
+                </div>
+
+
+                <div class="calendar" id="calendar">
+                    <!-- display here the at least 6 months right from current month , in a card that shows the blleding days , fertile days, the rest days in the appropriate colors as per the dispplay of the days on calendar -->
+      
+                  
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="row text-center">
+                            <div class="col-lg-6">
+                                <p class="pinkcolor"><i class="las la-circle"></i> Menstruation Period</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="green"><i class="las la-circle"></i> Ovulation Period</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="notes">
+                            <p>Please note that this is only an estimation of your menstrual cycle</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" class="ng-scope">
+
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" class="ng-scope"></script>
+        <script class="ng-scope">
+
+
+            const getDatePickerTitle = elem => {
+                // From the label or the aria-label
+                const label = elem.nextElementSibling;
+                let titleText = '';
+                if (label && label.tagName === 'LABEL') {
+                    titleText = label.textContent;
+                } else {
+                    titleText = elem.getAttribute('aria-label') || '';
+                }
+                return titleText;
+            }
+
+            const elems = document.querySelectorAll('.datepicker_input');
+            for (const elem of elems) {
+                const datepicker = new Datepicker(elem, {
+                    'format': 'dd/mm/yyyy', // UK format
+                    title: getDatePickerTitle(elem)
+                });
+            }
+        </script>
+        <script class="ng-scope">
+
+
+            $(document).on("click", ".increase", function () {
+
+                var inputvalue = $(this).closest(".qty").find("input[type=text]").val();
+
+                var inputvalue = parseInt(inputvalue) + 1;
+
+                $(this).closest(".qty").find("input[type=text]").val(inputvalue);
+                if (parseInt(inputvalue) == 1) {
+
+                    $(this).closest(".qty").find(".decrease").attr("disabled", true);
+                } else {
+
+                    $(this).closest(".qty").find(".decrease").attr("disabled", false);
+                }
+
+            });
+            $(document).on("click", ".decrease", function () {
+                var inputvalue = $(this).closest(".qty").find("input[type=text]").val();
+                var inputvalue = parseInt(inputvalue) - 1;
+                $(this).closest(".qty").find("input[type=text]").val(inputvalue);
+                if (parseInt(inputvalue) == 1) {
+                    $(this).closest(".qty").find(".decrease").attr("disabled", true);
+                } else {
+                    $(this).closest(".qty").find(".decrease").attr("disabled", false);
+                }
+            });
+            $(document).on("click", ".increase2", function () {
+
+                var inputvalue = $(this).closest(".qty2").find("input[type=text]").val();
+
+                var inputvalue = parseInt(inputvalue) + 1;
+
+                $(this).closest(".qty2").find("input[type=text]").val(inputvalue);
+                if (parseInt(inputvalue) == 1) {
+
+                    $(this).closest(".qty2").find(".decrease2").attr("disabled", true);
+                } else {
+
+                    $(this).closest(".qty2").find(".decrease2").attr("disabled", false);
+                }
+
+            });
+            $(document).on("click", ".decrease2", function () {
+                var inputvalue = $(this).closest(".qty2").find("input[type=text]").val();
+                var inputvalue = parseInt(inputvalue) - 1;
+                $(this).closest(".qty2").find("input[type=text]").val(inputvalue);
+                if (parseInt(inputvalue) == 1) {
+                    $(this).closest(".qty2").find(".decrease2").attr("disabled", true);
+                } else {
+                    $(this).closest(".qty2").find(".decrease2").attr("disabled", false);
+                }
+            });
+            $(function () {
+                setInterval(function () {
+
+                    $("#datepicker").datepicker({
+                        showOn: "button",
+                        buttonImage: "opensite/images/calendar.png",
+                        buttonImageOnly: true,
+                        buttonText: "Select date"
+                    });
+                    //$( "#datepicker" ).datepicker();
+                }, 1000);
+            });
+         
+
+        </script>
+        <style class="ng-scope">
+            /* Adapts a floating label for use with a left-handed input group icon */
+            .form-floating>.bi-calendar-date+.datepicker_input+label {
+                padding-left: 3.5rem;
+                z-index: 3;
+            }
+
+            #datepicker {
+                display: none;
+            }
+
+            .calendar {
+                margin-top: 20px;
+            }
+
+            .calendar-month {
+                margin-bottom: 10px;
+            }
+
+            .calendar-month h3 {
+                margin: 0;
+                padding: 10px 0;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .calendar-days {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .day {
+                width: 14.28%;
+                padding: 5px;
+                text-align: center;
+            }
+
+            .pink {
+                background-color: #fd8080;
+                border-radius: 100%;
+                width: 35px;
+                height: 35px;
+                margin: 5px 3px;
+            }
+
+            .calendar-month {
+                width: 30%;
+                display: inline-block;
+                padding: 20px;
+                background: #fff;
+                margin: 0 15px;
+                margin-bottom: 26px;
+                box-shadow: 0 0 11px #3b3939;
+                border-radius: 10px;
+                height: 290px;
+            }
+
+            .qty .minus,
+            .qty .plus {
+                line-height: 0;
+                font-size: 33px;
+                padding: 0;
+            }
+
+            .qty .count {
+                width: 80px
+            }
+
+            .fertile {
+                background-color: #48e139;
+                color: #fff;
+                border-radius: 100%;
+                width: 35px;
+                height: 35px;
+                margin: 5px 3px;
+            }
+        </style>
+    </div>
+
+    
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="opensite/js/jquery.slim.min.js"></script>
+    <script src="opensite/js/popper.min.js"></script>
+    <script src="opensite/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+    <link href="Styles/AutoComplete.css" rel="stylesheet">
+
+    <script src="App/OpenAppV1.js"></script>
+
+  
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+    </div>
+
+    <div class="calendar-month ng-scope" ng-repeat="month in nextPeriodDates">
+        <h3 class="ng-binding">April 2024</h3>
+        <div class="calendar-days">
+            <!-- ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                1
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                2
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                3
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                4
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                5
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                6
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                7
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                8
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                9
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                10
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                11
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                12
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                13
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                14
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                15
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                16
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                17
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                18
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                19
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                20
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                21
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope pink" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                22
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                23
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                24
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                25
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                26
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                27
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                28
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                29
+            </div><!-- end ngRepeat: day in month.days --><div class="day ng-binding ng-scope fertile" ng-class="{'pink': isPinkDay(day), 'fertile': isFertileDay(day)}" ng-repeat="day in month.days">
+                30
+            </div><!-- end ngRepeat: day in month.days -->
+        </div>
+
+    </div>
+</body>
+
+</html>
+
